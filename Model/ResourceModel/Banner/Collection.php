@@ -89,7 +89,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Framework\Stdlib\DateTime\Timezone $stdTimezone,
         \Magestore\Bannerslider\Model\Slider $slider,
-        $connection = null,
+        \Magento\Framework\DB\Adapter\AdapterInterface $connection = null,
         \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource = null
     ) {
         parent::__construct($entityFactory, $logger, $fetchStrategy, $eventManager, $connection, $resource);
@@ -291,7 +291,6 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
         if ($this->_slider->getSortType() == \Magestore\Bannerslider\Model\Slider::SORT_TYPE_RANDOM) {
             $bannerCollection->setOrderRandByBannerId();
         }
-
         return $bannerCollection;
     }
 }
