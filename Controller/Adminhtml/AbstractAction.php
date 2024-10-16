@@ -37,6 +37,7 @@ abstract class AbstractAction extends \Magento\Backend\App\Action
      * @var \Magento\Backend\Helper\Js
      */
     protected $_jsHelper;
+    protected $_sliderCollectionFactory;
 
     /**
      * @var \Magento\Store\Model\StoreManagerInterface
